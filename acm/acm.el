@@ -8,7 +8,7 @@
 ;; Copyright (C) 2022, Andy Stewart, all rights reserved.
 ;; Created: 2022-05-31 16:29:33
 ;; Version: 0.1
-;; Last-Updated: 2022-09-28 21:44:15 +0800
+;; Last-Updated: 2022-09-30 20:46:09 +0800
 ;;           By: Gong Qijian
 ;; URL: https://www.github.org/manateelazycat/acm
 ;; Keywords:
@@ -703,7 +703,7 @@ influence of C1 on the result."
   (cl-reduce #'max
              (mapcar (lambda (v)
                        (funcall acm-string-width-function
-                                (format "%s %s" (plist-get v :display-label) (plist-get v :annotation))))
+                                (format "%s %s " (plist-get v :display-label) (plist-get v :annotation))))
                      acm-menu-candidates)))
 
 (defun acm-menu-render-items (items menu-index)
